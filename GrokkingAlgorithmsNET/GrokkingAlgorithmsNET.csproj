@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\01_BinarySearch\01_BinarySearch.csproj" />
+  </ItemGroup>
+
 </Project>
