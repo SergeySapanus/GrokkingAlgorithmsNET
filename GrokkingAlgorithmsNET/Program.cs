@@ -1,18 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _01_BinarySearch;
+using _02_SelectionSort;
 
 namespace GrokkingAlgorithmsNET
 {
     class Program
     {
+        private static readonly Random _random = new Random();
+
         static void Main(string[] args)
         {
-            BinarySearchExample01();
-            BinarySearchExample02();
-            BinarySearchExample03();
+            //BinarySearchExample01();
+            //BinarySearchExample02();
+            //BinarySearchExample03();
 
-
+            //SelectionSortExample01();
+            //SelectionSortExample02();
+            SelectionSortExample03();
+            SelectionSortExample04();
         }
 
         #region BinarySearch
@@ -67,5 +74,71 @@ namespace GrokkingAlgorithmsNET
         }
 
         #endregion BinarySearch
+
+        #region SelectionSort
+
+        static void SelectionSortExample01()
+        {
+            var items = new List<int>();
+
+            for (var i = 0; i < 20; i++)
+                items.Add(_random.Next(1, 1000));
+
+            Console.WriteLine($"Original: {string.Join(", ", items)}");
+
+            var result = SelectionSort.OrderByAscending(items);
+
+            Console.WriteLine($"OrderByAscending: {string.Join(", ", result)}");
+            Console.WriteLine();
+        }
+
+        static void SelectionSortExample02()
+        {
+            var items = new List<int>();
+
+            for (var i = 0; i < 20; i++)
+                items.Add(_random.Next(1, 1000));
+
+            Console.WriteLine($"Original: {string.Join(", ", items)}");
+
+            var result = SelectionSort.OrderByDescending(items);
+
+            Console.WriteLine($"OrderByDescending: {string.Join(", ", result)}");
+            Console.WriteLine();
+        }
+
+        static void SelectionSortExample03()
+        {
+            var items = new List<Guid>();
+
+            for (var i = 0; i < 20; i++)
+                items.Add(Guid.NewGuid());
+
+            Console.WriteLine($"Original:\r\n{string.Join("\r\n", items)}");
+            Console.WriteLine();
+
+            var result = SelectionSort.OrderByAscending(items);
+
+            Console.WriteLine($"OrderByAscending:\r\n{string.Join("\r\n", result)}");
+            Console.WriteLine();
+        }
+
+        static void SelectionSortExample04()
+        {
+            var items = new List<Guid>();
+
+            for (var i = 0; i < 20; i++)
+                items.Add(Guid.NewGuid());
+
+            Console.WriteLine($"Original:\r\n{string.Join("\r\n", items)}");
+            Console.WriteLine();
+
+            var result = SelectionSort.OrderByDescending(items);
+
+            Console.WriteLine($"OrderByDescending:\r\n{string.Join("\r\n", result)}");
+            Console.WriteLine();
+        }
+
+        #endregion SelectionSort
     }
 }
