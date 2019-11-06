@@ -15,11 +15,12 @@ namespace GrokkingAlgorithmsNET
             //BinarySearchExample01();
             //BinarySearchExample02();
             //BinarySearchExample03();
+            BinarySearchExample04();
 
             //SelectionSortExample01();
             //SelectionSortExample02();
-            SelectionSortExample03();
-            SelectionSortExample04();
+            //SelectionSortExample03();
+            //SelectionSortExample04();
         }
 
         #region BinarySearch
@@ -68,6 +69,23 @@ namespace GrokkingAlgorithmsNET
             Console.WriteLine($"Expected index: {indexExpected}");
 
             var index = BinarySearch.IndexOf(array, array[indexExpected]);
+            var indexString = index.HasValue ? index.Value.ToString() : "null";
+
+            Console.WriteLine($"Actual index: {indexString}");
+        }
+
+        static void BinarySearchExample04()
+        {
+            var array = new[]
+            {
+                Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid()
+            }.OrderBy(a => a).Select(a => a.ToString()).ToArray();
+
+            int? indexExpected = null;
+
+            Console.WriteLine($@"Expected index: {(indexExpected.HasValue ? indexExpected.Value.ToString() : "null")}");
+
+            var index = BinarySearch.IndexOf(array, "serge");
             var indexString = index.HasValue ? index.Value.ToString() : "null";
 
             Console.WriteLine($"Actual index: {indexString}");
