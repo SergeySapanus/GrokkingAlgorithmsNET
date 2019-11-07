@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using _01_BinarySearch;
 using _02_SelectionSort;
-using _03_01_Countdown;
+using _03_01_RecursionCountdown;
+using _03_02_RecursionGreet;
 
 namespace GrokkingAlgorithmsNET
 {
@@ -23,7 +24,8 @@ namespace GrokkingAlgorithmsNET
             //SelectionSortExample03();
             //SelectionSortExample04();
 
-            RecursionCountdown();
+            //RecursionCountdownExample01();
+            RecursionGreetExample01();
         }
 
         #region BinarySearch
@@ -164,9 +166,14 @@ namespace GrokkingAlgorithmsNET
 
         #region Recursion
 
-        static void RecursionCountdown()
+        static void RecursionCountdownExample01()
         {
-            Countdown.CountdownMethod(50);
+            RecursionCountdown.Countdown(50);
+        }
+
+        static void RecursionGreetExample01()
+        {
+            RecursionGreet.Greet("Sergey");
         }
 
         #endregion Recursion

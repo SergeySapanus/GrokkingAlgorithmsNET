@@ -8,7 +8,8 @@
   <ItemGroup>
     <ProjectReference Include="..\01_BinarySearch\01_BinarySearch.csproj" />
     <ProjectReference Include="..\02_SelectionSort\02_SelectionSort.csproj" />
-    <ProjectReference Include="..\03_01_Countdown\03_01_Countdown.csproj" />
+    <ProjectReference Include="..\03_01_Countdown\03_01_RecursionCountdown.csproj" />
+    <ProjectReference Include="..\03_02_RecursionGreet\03_02_RecursionGreet.csproj" />
   </ItemGroup>
 
 </Project>
