@@ -10,6 +10,7 @@
     <ProjectReference Include="..\02_SelectionSort\02_SelectionSort.csproj" />
     <ProjectReference Include="..\03_01_Countdown\03_01_RecursionCountdown.csproj" />
     <ProjectReference Include="..\03_02_RecursionGreet\03_02_RecursionGreet.csproj" />
+    <ProjectReference Include="..\03_03_RecursionFactorial\03_03_RecursionFactorial.csproj" />
   </ItemGroup>
 
 </Project>

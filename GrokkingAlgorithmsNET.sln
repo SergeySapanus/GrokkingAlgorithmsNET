@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_01_RecursionCountdown", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_02_RecursionGreet", "03_02_RecursionGreet\03_02_RecursionGreet.csproj", "{12B85EEE-A314-4336-A363-FF5C7D4B904A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_03_RecursionFactorial", "03_03_RecursionFactorial\03_03_RecursionFactorial.csproj", "{80731319-B89F-4421-AE16-0BFE96CB1D67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{12B85EEE-A314-4336-A363-FF5C7D4B904A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12B85EEE-A314-4336-A363-FF5C7D4B904A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12B85EEE-A314-4336-A363-FF5C7D4B904A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80731319-B89F-4421-AE16-0BFE96CB1D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80731319-B89F-4421-AE16-0BFE96CB1D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80731319-B89F-4421-AE16-0BFE96CB1D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80731319-B89F-4421-AE16-0BFE96CB1D67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

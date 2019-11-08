@@ -5,6 +5,7 @@ using _01_BinarySearch;
 using _02_SelectionSort;
 using _03_01_RecursionCountdown;
 using _03_02_RecursionGreet;
+using _03_03_RecursionFactorial;
 
 namespace GrokkingAlgorithmsNET
 {
@@ -25,7 +26,8 @@ namespace GrokkingAlgorithmsNET
             //SelectionSortExample04();
 
             //RecursionCountdownExample01();
-            RecursionGreetExample01();
+            //RecursionGreetExample01();
+            RecursionFactorialExample01();
         }
 
         #region BinarySearch
@@ -174,6 +176,14 @@ namespace GrokkingAlgorithmsNET
         static void RecursionGreetExample01()
         {
             RecursionGreet.Greet("Sergey");
+        }
+
+        static void RecursionFactorialExample01()
+        {
+            const int num = 5;
+
+            Console.WriteLine($"num = {num}");
+            Console.WriteLine($"Factorial(num) = {RecursionFactorial.Factorial(num)}");
         }
 
         #endregion Recursion
