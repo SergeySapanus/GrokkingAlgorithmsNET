@@ -6,6 +6,7 @@ using _02_SelectionSort;
 using _03_01_RecursionCountdown;
 using _03_02_RecursionGreet;
 using _03_03_RecursionFactorial;
+using _04_01_QuicksortDivideAndConquer;
 
 namespace GrokkingAlgorithmsNET
 {
@@ -27,7 +28,9 @@ namespace GrokkingAlgorithmsNET
 
             //RecursionCountdownExample01();
             //RecursionGreetExample01();
-            RecursionFactorialExample01();
+            //RecursionFactorialExample01();
+
+            QuicksortDivideAndConquerExample01();
         }
 
         #region BinarySearch
@@ -187,5 +190,18 @@ namespace GrokkingAlgorithmsNET
         }
 
         #endregion Recursion
+
+        #region Quicksort
+
+        static void QuicksortDivideAndConquerExample01()
+        {
+            var size = (1680, 640);
+            var result = QuicksortDivideAndConquer.GetBiggestEvenlySize(size);
+
+            Console.WriteLine($"{nameof(QuicksortDivideAndConquer.GetBiggestEvenlySize)} = {result}");
+            Console.WriteLine($"Plot of land count = {size.Item1 / result * (size.Item2 / result)}");
+        }
+
+        #endregion Quicksort
     }
 }

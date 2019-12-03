@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +11,7 @@
     <ProjectReference Include="..\03_01_Countdown\03_01_RecursionCountdown.csproj" />
     <ProjectReference Include="..\03_02_RecursionGreet\03_02_RecursionGreet.csproj" />
     <ProjectReference Include="..\03_03_RecursionFactorial\03_03_RecursionFactorial.csproj" />
+    <ProjectReference Include="..\04_01_QuicksortDivideAndConquer\04_01_QuicksortDivideAndConquer.csproj" />
   </ItemGroup>
 
 </Project>
