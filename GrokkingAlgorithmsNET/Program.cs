@@ -7,12 +7,14 @@ using _03_01_RecursionCountdown;
 using _03_02_RecursionGreet;
 using _03_03_RecursionFactorial;
 using _04_01_QuicksortDivideAndConquer;
+using AutoFixture;
 
 namespace GrokkingAlgorithmsNET
 {
     class Program
     {
         private static readonly Random _random = new Random();
+        private static readonly Fixture _fixture = new Fixture();
 
         static void Main(string[] args)
         {
@@ -30,7 +32,8 @@ namespace GrokkingAlgorithmsNET
             //RecursionGreetExample01();
             //RecursionFactorialExample01();
 
-            QuicksortDivideAndConquerExample01();
+            //QuicksortDivideAndConquerExample01();
+            QuicksortDivideAndConquerExample02();
         }
 
         #region BinarySearch
@@ -200,6 +203,23 @@ namespace GrokkingAlgorithmsNET
 
             Console.WriteLine($"{nameof(QuicksortDivideAndConquer.GetBiggestEvenlySize)} = {result}");
             Console.WriteLine($"Plot of land count = {size.Item1 / result * (size.Item2 / result)}");
+        }
+
+        static void QuicksortDivideAndConquerExample02()
+        {
+            IEnumerable<int> GetArray()
+            {
+                for (var i = 0; i < 100; i++)
+                {
+                    yield return _fixture.Create<int>(); ;
+                }
+            }
+
+            var array = GetArray().ToArray();
+            var result = QuicksortDivideAndConquer.GetTotal(array);
+
+            Console.WriteLine($"{nameof(GetArray)} = {array.AsString()}");
+            Console.WriteLine($"{nameof(QuicksortDivideAndConquer.GetTotal)} = {result}");
         }
 
         #endregion Quicksort

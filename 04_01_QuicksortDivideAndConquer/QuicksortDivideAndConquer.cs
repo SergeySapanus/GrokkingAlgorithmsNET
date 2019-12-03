@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _04_01_QuicksortDivideAndConquer
 {
@@ -29,6 +32,18 @@ namespace _04_01_QuicksortDivideAndConquer
                 return GetBiggestEvenlySize((width: smaller, height: rest));
 
             return smaller;
+        }
+
+        public static int GetTotal(IEnumerable<int> enumerable)
+        {
+            if (enumerable == null)
+                return 0;
+
+            var array = enumerable as int[] ?? enumerable.ToArray();
+            if (!array.Any())
+                return 0;
+
+            return array.Take(1).First() + GetTotal(array.Skip(1));
         }
     }
 }

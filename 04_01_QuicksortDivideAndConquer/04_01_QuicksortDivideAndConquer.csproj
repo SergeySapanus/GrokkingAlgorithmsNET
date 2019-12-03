@@ -5,4 +5,8 @@
     <RootNamespace>_04_01_QuicksortDivideAndConquer</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="4.11.0" />
+  </ItemGroup>
+
 </Project>
